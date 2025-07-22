@@ -1,0 +1,4 @@
+name: telegram-bridge
+version: '1.0-SNAPSHOT'
+main: com.Romawertq.telegramBridge.TelegramBridge
+api-version: '1.21'
