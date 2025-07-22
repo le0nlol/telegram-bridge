@@ -2,6 +2,3 @@ name: telegram-bridge
 version: '1.0-SNAPSHOT'
 main: com.romawertq.telegrambridge.Telegram_bridge
 api-version: '1.21'
-commands:
-  гдея:
-    description: Ква

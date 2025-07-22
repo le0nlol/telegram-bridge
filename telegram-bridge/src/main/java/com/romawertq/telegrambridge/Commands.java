@@ -23,6 +23,6 @@ public class Commands implements CommandExecutor, Listener {
     }
     @EventHandler
     public void playerjoin(PlayerJoinEvent event){
-        Bukkit.broadcastMessage(event.getPlayer().getDisplayName() + "зашёл на сервер");
+        Bukkit.broadcastMessage(event.getPlayer().getDisplayName() + " зашёл на сервер!");
     }
 }
