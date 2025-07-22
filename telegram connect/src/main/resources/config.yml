@@ -1,0 +1,4 @@
+bot:
+  token: "YOUR_BOT_TOKEN"
+  chat-id: "Id channel"
+  topic-id: Id topic
