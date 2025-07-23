@@ -20,7 +20,6 @@ public class bot extends TelegramLongPollingBot implements Listener {
     private String r;
     private String message;
     private String NamePlayer;
-    private int receivedValue;
     public String botToken;
     public String chatId;
     public int topicId;
@@ -28,29 +27,29 @@ public class bot extends TelegramLongPollingBot implements Listener {
 
     @Override
     public void onUpdateReceived(Update update) {
-        String chatId = update.getMessage().getChatId().toString();
-        String Text = update.getMessage().getText();
-        SendMessage sendMessage = new SendMessage();
-        sendMessage.setChatId(chatId);
-        sendMessage.setText(Text);
-
-
-        try {
-            this.execute(sendMessage);
-        } catch (TelegramApiException e) {
-            throw new RuntimeException(e);
+        if (!f.isEmpty()){
+            SendMessage message = new SendMessage();
+            message.setChatId(chatId.toString());
+            message.setMessageThreadId(topicId); // Устанавливаем ID топика
+            message.setText(f);
+        }
+        if (!g.isEmpty()){
+            SendMessage message = new SendMessage();
+            message.setChatId(chatId.toString());
+            message.setMessageThreadId(topicId); // Устанавливаем ID топика
+            message.setText(g);
         }
     }
 
 
     @Override
     public String getBotUsername() {
-        return "";
+        return getBotToken();
     }
 
     @Override
     public String getBotToken() {
-        return "";
+        return botToken;
     }
 
     @EventHandler
@@ -77,6 +76,10 @@ public class bot extends TelegramLongPollingBot implements Listener {
     }
 
 }
-class botik extends JavaPlugin {
-
+class botik extends bot  {
+    public botik(String hyp, String gyp, int value) {
+        this.topicId = value;
+        this.botToken = hyp;
+        this.chatId = gyp;
+    }
 }

@@ -8,9 +8,9 @@ import org.telegram.telegrambots.meta.exceptions.TelegramApiException;
 import org.telegram.telegrambots.updatesreceivers.DefaultBotSession;
 
 public final class Telegram_bridge extends JavaPlugin implements Listener {
-    private String botToken;
-    private String chatId;
-    private int topicId;
+    private static String botToken;
+    private static String chatId;
+    private static int topicId;
     @Override
     public void onEnable() {
         saveDefaultConfig();
@@ -34,10 +34,10 @@ public final class Telegram_bridge extends JavaPlugin implements Listener {
     }
 
     public static void main(String[] args) {
-        botik a = new botik();
-        String value = a.getData();
-        System.out.println(value); // Вывод значения: "Значение из ClassB"
+        botik objA = new botik(botToken, chatId, topicId);
     }
+
+
 
     @Override
     public void onDisable() {
