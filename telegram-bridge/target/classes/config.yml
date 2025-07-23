@@ -1,0 +1,5 @@
+bot:
+  token: "YOUR_BOT_TOKEN"
+  chat-id: "YOUR_GROUP_ID" #You can use @LeadConverterToolkitBot to get your group's ID
+  topic-id: "YOUR_TOPIC_ID"
+  username: "YOUR_BOT_USERNAME"
