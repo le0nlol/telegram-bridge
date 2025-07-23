@@ -1,3 +1,3 @@
-# telegram-bridge
+# telegram-connect
 
-We are codding what our humanity have never seen 🤫
+ну че-то типо дорабатываем за остальных
